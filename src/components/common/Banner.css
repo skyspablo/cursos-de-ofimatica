@@ -1,0 +1,30 @@
+.carousel-item{
+    position: relative;
+
+}
+.carousel-tag{
+    position: absolute;
+    z-index: 999;
+    left: 18%;
+    bottom: 50%;
+    font-size: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-align: left;
+
+}
+
+.carousel-tag span{
+    display: block;
+    color:#0098d7;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .carousel-tag{
+        left: 20px;
+        bottom: 30%;
+        font-size: 1rem;
+    }
+
+}

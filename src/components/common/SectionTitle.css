@@ -1,0 +1,13 @@
+.section-title{
+    height: 168px;
+    background-size: cover;
+}
+
+.section-title h1{
+    color:white;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.8rem;
+    line-height: 168px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}

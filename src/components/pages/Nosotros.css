@@ -1,0 +1,48 @@
+.nosotros-holder{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.nosotros-holder h2{
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.8rem;
+}
+
+.nosotros-holder p{
+    margin-bottom: 20px;
+}
+
+.react-tabs ul{
+    background: #0098D7;
+    color:white;
+    font-family: "Roboto Slab", sans-serif;
+    text-transform: uppercase;
+    padding-top: 3px;
+    padding-left: 3px;
+    font-weight: 700;
+    border:none;
+
+}
+
+.react-tabs ul li{
+    margin-right: 30px;
+}
+.react-tabs .react-tabs__tab--selected{
+    padding: 20px;
+    border-radius: 0;
+    border:none;
+}
+
+.react-tabs__tab-panel{
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    .nosotros-holder{
+        display: block;
+    }
+}

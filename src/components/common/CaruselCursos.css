@@ -1,0 +1,30 @@
+.custom-button-group{
+    width: 100px;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0 auto;
+}
+
+.custom-button-group button{
+    cursor: pointer;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    color:white;
+    background: #0098d7 ;
+    border: none;
+}
+
+
+.carousel-parent{
+    min-height: 350px;
+    margin-top: 30px;
+}
+.carousel-parent h2{
+    text-align: center;
+    margin: 80px auto 30px auto;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 2rem;
+}

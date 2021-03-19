@@ -1,0 +1,422 @@
+.cta-home{
+    font-family: "Roboto Slab", serif;
+    background: #0098d7;
+    margin: -100px auto 0 auto;
+    border-radius: 12px;
+    z-index: 99999;
+    position: relative;
+    display: flex;
+    padding: 50px 30px;
+    color:#171818;
+}
+
+.cta-home h2{
+    flex: 1;
+    padding:0 20px;
+    font-size: 1.8rem;
+}
+.cta-home .countdown-holder{
+    flex: 1;
+    text-align: center;
+}
+
+.cta-home .countdown-holder a{
+    color:white;
+    background: green;
+    padding: 20px;
+    border-radius: 12px;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+    margin-top: 20px;
+    transition: ease all .3s;
+}
+
+
+.cta-home .countdown-holder a:hover{
+
+    background: darkgreen;
+
+}
+
+.cta-home .countdown-holder a svg{
+    margin-right: 20px;
+}
+
+.cta-home .countdown{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.cta-home .countdown h2{
+
+    padding:0;
+    color:white;
+    font-size: 3rem;
+}
+
+.cta-home .countdown span{
+    font-weight: 500;
+}
+
+section.first-section{
+    margin-top: 40px;
+}
+
+.first-section{
+    padding:20px;
+    display: flex;
+    position: relative;
+}
+.first-section .circle:before{
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: #C9EFFF;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    left: 100px;
+    top: 20px;
+}
+
+.first-section .circle{
+    flex:2;
+    padding:60px 0 0 140px;
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+.first-section .circle span{
+
+    color:#0098d7;
+
+}
+.first-section .content{
+    flex:3;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.first-section .content p{
+    margin: 10px 0;
+}
+
+.first-section .content h3{
+    color:green;
+}
+
+.first-section .content h3 span{
+    color:red;
+    text-decoration: line-through;
+}
+
+
+.cta-bg{
+    min-height: 400px;
+    background-size: cover;
+    padding: 40px 20px;
+    margin: 50px 0;
+}
+
+.cta-bg .flex{
+    display: flex;
+    align-items: center;
+}
+
+.cta-bg .text{
+    flex:1;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.cta-bg .text h3{
+    color:#0098d7;
+    text-align: center;
+    font-weight: 700;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+.cta-bg .text p{
+    color:#0098d7;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.cta-bg .text button{
+    margin: 20px auto;
+    background: rgb(246, 208, 2);
+    padding:6px 12px;
+    border: none;
+    transition: ease all .3s;
+    border-radius: 6px;
+    font-size: 1.3rem;
+}
+
+.cta-bg .text button:hover{
+    cursor: pointer;
+    background: rgb(255, 170, 0);
+}
+
+.cta-bg .moving-img{
+    flex:1;
+}
+
+.cta-bg .moving-img img{
+    width: 100%;
+    position: relative;
+}
+
+.porque-cdo .grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+.tarjeta-home{
+    background: white;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .14);
+    min-height: 300px;
+    display: flex;
+    border-left: 6px solid #0098d7;
+    padding:30px;
+    align-items: start;
+    justify-content: space-between;
+
+}
+
+.tarjeta-home:hover{
+    background: #0098d7;
+    cursor: pointer;
+    transition: ease all .3s;
+}
+
+.tarjeta-home svg{
+    flex:1;
+    font-size: 2rem;
+    color:#0098d7;
+}
+
+.tarjeta-home:hover svg{
+    color:white;
+}
+.tarjeta-home .content{
+    padding-left: 20px;
+    flex: 10;
+}
+
+.tarjeta-home .content h3{
+    font-family: "Roboto Slab",serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.tarjeta-home .content p{
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.counters{
+    height: 632px;
+    background-size: cover;
+    margin: 50px 0;
+
+}
+
+.counters .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.counter-items{
+    height: 280px;
+    color:white;
+    text-align: center;
+}
+.counter-items svg{
+    margin-top: 20px;
+    font-size: 4rem;
+}
+.counter-items h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: "Roboto Slab", sans-serif;
+    color:goldenrod;
+}
+.counter-items h4{
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.8rem;
+}
+
+.docentes-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+}
+.docentes-section h2{
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.docente{
+    text-align: center;
+}
+.docente h3{
+    margin: 20px 0;
+    font-family: "Roboto Slab", sans-serif;
+}
+.docente span{
+    color:#999;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.docentes-list img{
+    width: 100%;
+}
+
+.garantia{
+    margin-top: 50px;
+    background: #93C8EE;
+    padding-top: 50px;
+    color:white;
+}
+.garantia .container{
+    display: flex;
+
+    height: 500px;
+
+}
+.garantia h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+.garantia ul{
+    list-style: none;
+    flex: 1;
+}
+.garantia .img-holder{
+    flex: 1;
+    align-self: flex-end;
+    margin:0;padding:0;
+}
+
+.garantia .img-holder img{
+    width: 100%;
+    margin:0;padding:0;
+}
+.garantia ul li{
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+@media only screen and (max-width: 900px) {
+
+    .garantia .container{
+        display: block;
+        height: auto;
+        padding: 0 20px 50px 20px;
+    }
+
+    .docentes-list{
+        display: block;
+        padding: 0 20px;
+    }
+
+    .counters .container{
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .porque-cdo .grid{
+
+        grid-template-columns: repeat(1,1fr);
+
+        margin: 0 20px;
+    }
+
+    .cta-bg .flex{
+        display: block;
+    }
+
+    .cta-home{
+        display: block;
+        border-radius: unset;
+        padding: 20px 10px;
+        margin: 0;
+    }
+
+    .cta-home h2{
+        padding:0 20px;
+        font-size: 1.2rem;
+    }
+
+    .cta-home .countdown h2{
+        padding:0;
+        color:white;
+        font-size: 2rem;
+    }
+
+    .cta-home .countdown span{
+        font-weight: 500;
+    }
+
+    .cta-home .countdown-holder{
+        padding:0 20px;
+        margin-top: 20px;
+    }
+
+    .cta-home .countdown{
+       margin-bottom: 20px;
+    }
+
+    .cta-home .countdown-holder a{
+        margin: 20px auto;
+    }
+
+    .first-section{
+        display: block;
+    }
+
+
+    .first-section .circle:before{
+        display: block;
+        width: 300px;
+        height: 300px;
+        background: #C9EFFF;
+        border-radius: 50%;
+        content: ' ';
+        position: absolute;
+        z-index: -1;
+        left: 15%;
+        top: 20px;
+    }
+
+    .first-section .circle{
+        flex:2;
+        margin-left: 5%;
+        padding:60px 0 0 140px;
+        font-family: 'Roboto Slab',serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 130px;
+
+    }
+    .first-section .circle span{
+
+        color:#0098d7;
+
+    }
+}

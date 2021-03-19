@@ -1,0 +1,82 @@
+footer{
+    background: #0098D7;
+    padding: 50px 0;
+    color:white;
+}
+footer .container{
+    display: flex;
+}
+
+footer h3{
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+footer .paginas{
+    flex: 1;
+}
+
+footer .paginas ul{
+    margin-left: 20px;
+}
+footer .paginas ul li{
+    margin: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+footer .paginas ul li a{
+    color:white;
+    transition: ease all .3s;
+}
+
+footer .paginas ul li a:hover{
+    color:goldenrod;
+}
+
+footer .blog{
+    flex: 2;
+}
+
+footer .blog .entries{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+footer .blog .entry{
+    display: flex;
+    align-items: start;
+    width: 100%;
+}
+
+footer .blog .entry .title{
+    flex:2;
+    margin-left: 10px;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+footer .blog .entry .img{
+    flex:1;
+}
+
+footer .blog .entry .img img{
+    max-width: 80px;
+}
+
+@media only screen and (max-width: 900px) {
+    footer{
+        padding: 30px 20px 50px 20px;
+    }
+    footer .container{
+        display: block;
+    }
+
+    footer h3{
+        margin: 20px 0;
+        text-align: center;
+    }
+}

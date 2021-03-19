@@ -1,0 +1,176 @@
+.all-cursos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 100px auto 50px auto;
+    column-gap: 30px;
+    row-gap: 50px;
+}
+.curso-single{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    column-gap: 50px;
+    margin-top: 50px;
+}
+.curso-single h2{
+    font-size: 2.2rem;
+}
+.meta-categorias{
+    margin-top: 30px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.meta-categorias h3{
+    font-size: .80rem;
+    font-weight: 400;
+    color:#666;
+}
+
+.meta-categorias a{
+    display: inline-block;
+    margin-right: 5px;
+    color:black;
+    cursor: inherit;
+}
+.meta-categorias .icon{
+    font-size: 2rem;
+    color: #0098d7;
+}
+
+
+.single-tabs{
+    width: 100%;
+}
+
+.single-tabs .react-tabs__tab{
+    bottom: 0;
+}
+.single-tabs .react-tabs ul{
+    background: #f0f4fa;
+    color:#273044;
+    font-family: "Roboto Slab", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 0;
+    font-weight: 700;
+}
+
+.single-tabs .react-tabs ul li{
+
+    margin-right: 30px;
+}
+.single-tabs .react-tabs .react-tabs__tab--selected{
+    padding: 20px;
+    border-radius: 0;
+    border:none;
+    background: white;
+}
+
+.single-tabs .react-tabs__tab-panel{
+    margin-top: 30px;
+}
+#div-detalle{
+    margin-bottom: 50px;
+}
+#div-detalle p{
+    margin: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+#div-detalle h2{
+    margin: 20px 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+}
+#div-detalle ul{
+    margin-left: 20px;
+    background: none;
+}
+
+#div-detalle ul li{
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: none;
+    font-weight: 400;
+}
+.curriculum-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    background: #f0f4fa;
+    color:#273044;
+    margin-bottom: 3px;
+    padding: 10px;
+    cursor: pointer;
+}
+.curriculum-row .curriculum-number{
+    min-width: 30px;
+    text-align: left;
+    color:#999;
+}
+.curriculum-row .curriculum-icon{
+    color: #0098d7;
+}
+.curriculum-row .curriculum-label{
+    flex:1;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    transition: ease all .3s;
+}
+
+.curriculum-row .curriculum-label:hover{
+    color: #0098d7;
+}
+.curriculum-row .curriculum-duration{
+    color:#999;
+}
+
+.single-tabs .Collapsible{
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+.single-tabs .Collapsible .Collapsible__trigger{
+    padding: 20px 40px;
+    display: block;
+    cursor: pointer;
+}
+
+.single-tabs .Collapsible .Collapsible__trigger{
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    transition: ease all .3s;
+}
+
+.single-tabs .Collapsible .Collapsible__trigger.is-open{
+    border-top: 3px solid #0098d7;
+}
+
+.single-tabs .Collapsible .Collapsible__contentInner{
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 40px 20px 40px;
+}
+iframe{
+    display: none;
+}
+@media only screen and (max-width: 1200px) {
+    .all-cursos{
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .all-cursos{
+
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+}
