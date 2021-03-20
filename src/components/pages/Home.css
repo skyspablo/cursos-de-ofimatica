@@ -184,7 +184,7 @@ section.first-section{
     display: flex;
     border-left: 6px solid #0098d7;
     padding:30px;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
 
 }

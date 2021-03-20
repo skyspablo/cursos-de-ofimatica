@@ -9,7 +9,7 @@ import SectionTitle from "../common/SectionTitle";
 import ApiCache from "../utlis/ApiCache";
 import TarjetaCurso from "../common/TarjetaCurso";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
-import ContactForm from "../common/ContactForm";
+
 
 import Collapsible from "react-collapsible";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -19,26 +19,17 @@ import {
     faChartBar,
     faFileAlt, faFlag,
     faImages,
-    faSlidersH,
     faUsers,
     faVideo
 } from "@fortawesome/free-solid-svg-icons";
-import {faSlideshare} from "@fortawesome/free-brands-svg-icons";
+
 
 
 const Cursos = (props) => {
 
-    const emptyCourse = {
-        title: '',
-        images:{
-            full: ''
-        },
-        description: ''
-    }
-
     const [isLoading, setIsLoading] = useState(true);
     const [courses, setCourses] = useState([]);
-    const [course, setCourse] = useState(emptyCourse);
+    const [course, setCourse] = useState({});
 
 
     const [curriculum, setCurriculum] = useState([]);
@@ -65,19 +56,15 @@ const Cursos = (props) => {
         return a;
     }
 
-    const getData = async (name, endpoint) => {
-        return await ApiCache(name, endpoint);
-    }
-
     let iframeDetalleRef = useRef(null);
 
     useEffect(() => {
         setIsLoading(true);
         if (slug === undefined) {
-            getData('todos-cursos', endpoint)
+            ApiCache('todos-cursos', endpoint)
                 .then((r) => {
 
-                    setCourse(emptyCourse)
+                    setCourse({})
                     setFaq([])
                     setCurriculum([])
                     setMetaInfo([]);
@@ -88,10 +75,9 @@ const Cursos = (props) => {
                 })
                 .catch((err) => console.log(err))
         } else {
-            getData(`curso-${slug}`, endpointSingle)
+            ApiCache(`curso-${slug}`, endpointSingle)
                 .then((r) => {
                     setCourses([])
-
                     setCourse(r)
                     setFaq(r.faq)
                     setCurriculum(r.curriculum)
@@ -102,7 +88,7 @@ const Cursos = (props) => {
                 })
                 .catch((err) => console.log(err))
 
-            getData('todos-cursos', endpoint)
+            ApiCache('todos-cursos', endpoint)
                 .then((r) => {
                     shuffle(r.courses);
                     setCursosPopulares(r.courses);
@@ -114,7 +100,7 @@ const Cursos = (props) => {
 
     const items = courses.map(curso => {
         return (
-            <TarjetaCurso curso={curso}/>
+            <TarjetaCurso curso={curso} key={`cursos-todos-${curso.id}`}/>
         )
     });
 
@@ -188,7 +174,7 @@ const Cursos = (props) => {
                 </Link>
             );
         } else {
-            return <></>;
+            return <i key={'notanusefullelement-' + index} />;
         }
 
     });
@@ -266,11 +252,12 @@ const Cursos = (props) => {
 
                                 <TabPanel>
 
-                                    <img src={course.images.full} className="img-fluid"/>
+                                    <img src={course.images.full} className="img-fluid" alt={''}/>
 
                                     {/* Por cosas de la vida, esta fue la mejor forma que encontre de parsear el html de la respuesta */}
                                     <div id={'div-detalle'} dangerouslySetInnerHTML={{__html: detalleContent}}/>
                                     <iframe srcDoc={course.description} onLoad={setDetalleToState}
+                                            title={'i'}
                                             ref={iframeDetalleRef}/>
 
 
@@ -295,25 +282,25 @@ const Cursos = (props) => {
                             Iniciar Sesión
                         </Link>
                         <ul>
-                            <li>
+                            <li key={'list1'}>
                                 Inscriptios: <b>865 students</b>
                                 <FontAwesomeIcon icon={faUsers}/>
                             </li>
-                            <li>
+                            <li key={'list2'}>
                                 Duración: <b>6</b>
                                 <FontAwesomeIcon icon={faClock}/>
                             </li>
-                            <li>
+                            <li key={'list3'}>
                                 Conferencias: <b>8</b>
                                 <FontAwesomeIcon icon={faBullhorn}/>
                             </li>
 
-                            <li>
+                            <li key={'list4'}>
                                 Video: <b>2</b>
                                 <FontAwesomeIcon icon={faVideo}/>
                             </li>
 
-                            <li>
+                            <li key={'list5'}>
                                 Nivel: Intermediario
                                 <FontAwesomeIcon icon={faChartBar}/>
                             </li>

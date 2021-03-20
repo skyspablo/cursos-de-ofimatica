@@ -1,11 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Nosotros from "./components/pages/Nosotros";

@@ -8,25 +8,19 @@ const Footer = (props) => {
     const endpoint = process.env.REACT_APP_API_WP + `posts?per_page=4&_embed`;
     const [footerPost, setFooterPost] = useState([]);
 
-    const getData = async () => {
-        return await ApiCache('footer-blogs', endpoint);
-    }
-
     useEffect(() => {
-        getData().then((r) => {
-            const posts = r.map(post => {
-                return {
-                    id: post.id,
-                    img: post['_embedded']['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url ?? '',
-                    title: post.title.rendered
-                }
+        ApiCache('footer-blogs', endpoint)
+            .then( (r) => {
+                const posts = r.map(post => {
+                    return {
+                        id: post.id,
+                        img: post['_embedded']['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url ?? '',
+                        title: post.title.rendered
+                    }
+                });
+                setFooterPost(posts);
             });
-            setFooterPost(posts);
-        })
-            .catch((err) => {
-
-            });
-    }, [])
+    }, [endpoint])
 
 
     const blog_footer = footerPost.map(blog => {

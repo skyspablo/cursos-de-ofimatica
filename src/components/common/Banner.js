@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import './Banner.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -25,14 +25,14 @@ const Banner = (props) => {
                         Agregamos cursos nuevos <br />
                         <span>¡todos los meses, sin costos extras!</span>
                     </div>
-                    <img src={slide1} />
+                    <img src={slide1} alt={''} />
                 </div>
                 <div className='carousel-item'>
                     <div className={'carousel-tag '}>
                         Somos un sitio de aprendizaje real<br />
                         <span>PARA TODA LA FAMILIA</span>
                     </div>
-                    <img src={slide2} />
+                    <img src={slide2} alt={''} />
                 </div>
                 <div className='carousel-item'>
                     <div className={'carousel-tag '}>
@@ -40,7 +40,7 @@ const Banner = (props) => {
                         dictados por docentes
                         <span>certificados con Microsoft Office Specialist</span>
                     </div>
-                    <img src={slide3} />
+                    <img src={slide3} alt={''} />
                 </div>
             </Carousel>
         </>

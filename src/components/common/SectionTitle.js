@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import './SectionTitle.css';
 import banner from '../../images/Barra-Cursos-1919x169.jpg'

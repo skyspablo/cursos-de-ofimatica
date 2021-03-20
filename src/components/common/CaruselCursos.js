@@ -11,33 +11,14 @@ const CaruselCursos = (props) => {
     const [courses, setCourses] = useState([]);
     const endpoint = process.env.REACT_APP_API_LMS + `courses?page=1&category=${props.category}&per_page=1000`;
 
-    const getData = async () => {
-        /*const data = await fetch(endpoint);
-        const cursos = await data.json();
-        return cursos;*/
-        return await ApiCache('carusel-cursos-'+props.category, endpoint);
-    }
-
     useEffect(() => {
-        getData()
-            .then((r) => {
+       ApiCache('carusel-cursos-'+props.category, endpoint)
+           .then( (r) => {
+               setCourses(r.courses)
+           });
 
-                setCourses(r.courses)
-            })
-            .catch((err) => console.log(err))
+    }, [endpoint, props.category])
 
-    }, [])
-
-
-    const ButtonGroup = ({next, previous, ...rest}) => {
-        const {carouselState: {currentSlide}} = rest;
-        return (
-            <div className="carousel-button-group" style={ {position:'absolute'} }>
-                <button className={currentSlide === 0 ? 'disable' : ''} onClick={() => previous()}>Atras</button>
-                <button onClick={() => next()}> Siguiente</button>
-            </div>
-        );
-    };
 
     const responsive = {
 
@@ -56,7 +37,7 @@ const CaruselCursos = (props) => {
     };
     const items = courses.map(curso => {
             return (
-                <TarjetaCurso curso={curso} />
+                <TarjetaCurso curso={curso} key={`tarjeta-curso-${curso.id}`} />
             )
         });
     return (
