@@ -165,10 +165,13 @@ const Cursos = (props) => {
 
     const buildCursosPopulares = cursosPopulares.map((item, index) => {
         if (index < 3) {
+
             return (
-                <Link to={`/cursos/${item.id}`} className={'invisible-link'} key={`popular-${item.id}`}>
+                <Link to={`/cursos/${item.id}/${encodeURI(item.title)}`} className={'invisible-link'} key={`popular-${item.id}`}>
                     <div className={'curso-popular-item'}>
-                        <img src={item.images.small} alt={item.title} className={'img-fluid'}/>
+                        <div className={'img-squared'}>
+                            <img src={item.images.small} alt={item.title}  />
+                        </div>
                         <h2 className={'title'}>{item.title}</h2>
                     </div>
                 </Link>
@@ -252,11 +255,11 @@ const Cursos = (props) => {
 
                                 <TabPanel>
 
-                                    <img src={course.images.full} className="img-fluid" alt={''}/>
+                                    <img src={course?.images?.full} className="img-fluid" alt={''}/>
 
                                     {/* Por cosas de la vida, esta fue la mejor forma que encontre de parsear el html de la respuesta */}
                                     <div id={'div-detalle'} dangerouslySetInnerHTML={{__html: detalleContent}}/>
-                                    <iframe srcDoc={course.description} onLoad={setDetalleToState}
+                                    <iframe srcDoc={course?.description} onLoad={setDetalleToState}
                                             title={'i'}
                                             ref={iframeDetalleRef}/>
 
@@ -278,34 +281,45 @@ const Cursos = (props) => {
                     </main>
 
                     <aside>
-                        <Link to={'/acceder'}>
+                        <Link to={'/acceder'} className={'btn-sidebar'}>
                             Iniciar Sesión
                         </Link>
                         <ul>
                             <li key={'list1'}>
-                                Inscriptios: <b>865 students</b>
-                                <FontAwesomeIcon icon={faUsers}/>
+                                <div>Inscriptios: <b>865 students</b></div>
+                                <div className={'icon'}>
+                                    <FontAwesomeIcon icon={faUsers}/>
+                                </div>
                             </li>
                             <li key={'list2'}>
-                                Duración: <b>6</b>
-                                <FontAwesomeIcon icon={faClock}/>
+                                <div>Duración: <b>6</b></div>
+                                <div className={'icon'}>
+                                    <FontAwesomeIcon icon={faClock}/>
+                                </div>
                             </li>
                             <li key={'list3'}>
-                                Conferencias: <b>8</b>
-                                <FontAwesomeIcon icon={faBullhorn}/>
+                                <div>Conferencias: <b>8</b></div>
+                                <div className={'icon'}>
+                                    <FontAwesomeIcon icon={faBullhorn}/>
+                                </div>
                             </li>
 
                             <li key={'list4'}>
-                                Video: <b>2</b>
-                                <FontAwesomeIcon icon={faVideo}/>
+                                <div>Video: <b>2</b></div>
+                                <div className={'icon'}>
+                                    <FontAwesomeIcon icon={faVideo}/>
+                                </div>
                             </li>
 
                             <li key={'list5'}>
-                                Nivel: Intermediario
-                                <FontAwesomeIcon icon={faChartBar}/>
+                                <div>Nivel: <b>Intermediario</b></div>
+                                <div className={'icon'}>
+                                    <FontAwesomeIcon icon={faChartBar}/>
+                                </div>
                             </li>
                         </ul>
                         <div className="cursos-populares">
+                            <h2 className={'title'}>Cursos Populares</h2>
                             {buildCursosPopulares}
                         </div>
                     </aside>

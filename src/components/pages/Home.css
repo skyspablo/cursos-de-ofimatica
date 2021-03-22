@@ -117,7 +117,7 @@ section.first-section{
 .cta-bg{
     min-height: 400px;
     background-size: cover;
-    padding: 40px 20px;
+    padding: 40px 0;
     margin: 50px 0;
 }
 
@@ -148,7 +148,7 @@ section.first-section{
 }
 
 .cta-bg .text button{
-    margin: 20px auto;
+    margin: 20px 0;
     background: rgb(246, 208, 2);
     padding:6px 12px;
     border: none;
@@ -294,9 +294,7 @@ section.first-section{
 }
 .garantia .container{
     display: flex;
-
     height: 500px;
-
 }
 .garantia h2{
     text-align: center;
@@ -327,7 +325,7 @@ section.first-section{
     .garantia .container{
         display: block;
         height: auto;
-        padding: 0 20px 50px 20px;
+        padding: 0  20px 50px 20px;
     }
 
     .docentes-list{
@@ -336,15 +334,21 @@ section.first-section{
     }
 
     .counters .container{
-
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter-items h3{
+
+        font-size: 1.5rem;
 
     }
+    .counter-items h4{
+
+        font-size: 1.2rem;
+    }
+
     .porque-cdo .grid{
-
         grid-template-columns: repeat(1,1fr);
-
-        margin: 0 20px;
     }
 
     .cta-bg .flex{
@@ -383,7 +387,7 @@ section.first-section{
     }
 
     .cta-home .countdown-holder a{
-        margin: 20px auto;
+        margin: 20px 0;
     }
 
     .first-section{

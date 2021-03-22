@@ -20,6 +20,9 @@ function App() {
     return (
         <Router>
             <Switch>
+                <Route exact path="/cursos/:slug/:seo">
+                    <Cursos />
+                </Route>
                 <Route exact path="/cursos/:slug">
                     <Cursos />
                 </Route>

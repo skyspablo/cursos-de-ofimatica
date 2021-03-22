@@ -1,0 +1,22 @@
+.breadcrumbs{
+    background: #f0f0f0;
+    color:#aaa;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .7rem;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.bc-list{
+    list-style: none;
+    display: flex;
+    column-gap: 5px;
+}
+
+.bc-list li span{
+    margin-left: 5px;
+}
+
+.bc-list li a{
+    color:#aaa;
+    text-transform: uppercase;
+}
