@@ -1,6 +1,7 @@
 
 const ApiCache = async (name, endpoint) => {
     const duration = 1000 * 60 * 60 * 2;
+
     const get_storage = (name, endpoint) => {
         const storage = localStorage.getItem(name);
 

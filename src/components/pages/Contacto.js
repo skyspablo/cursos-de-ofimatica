@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import './Contacto.css'
+import './css/Contacto.css'
 
 import SectionTitle from "../common/SectionTitle";
 import ContactForm from "../common/ContactForm";

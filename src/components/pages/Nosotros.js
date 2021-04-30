@@ -6,7 +6,7 @@ import Footer from "../common/Footer";
 import SectionTitle from "../common/SectionTitle";
 
 import 'react-tabs/style/react-tabs.css';
-import './Nosotros.css'
+import './css/Nosotros.css'
 
 import grupoIdt from '../../images/IDT-1-nosotros-569x349.jpg'
 import chica from '../../images/SOBRE_NOSOTROS_1-569x307.jpg'

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Header from "../common/Header";
-import './Cursos.css'
+import './css/Cursos.css'
 import {Link, useParams} from "react-router-dom";
 import Loader from "react-loader-spinner";
 

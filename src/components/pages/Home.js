@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../common/Header";
 import Banner from "../common/Banner";
-import './Home.css'
+import './css/Home.css'
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {

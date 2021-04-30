@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../common/Header";
-import './Blog.css'
+import './css/Blog.css'
 
 
 import Footer from "../common/Footer";
 import SectionTitle from "../common/SectionTitle";
 import Loader from "react-loader-spinner";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import moment from 'moment'
 import 'moment/locale/es-mx'
 
@@ -14,6 +14,7 @@ import ApiCache from "../utlis/ApiCache";
 import BreadCrumbs from "../common/BreadCrumbs";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faClock} from "@fortawesome/free-regular-svg-icons";
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
 
 const Blog = (props) => {
 
@@ -134,7 +135,7 @@ const Blog = (props) => {
                         </div>*/}
                     </main>
                     <aside>
-
+                        <Sidebar />
                     </aside>
                 </div>
                 <Footer/>
@@ -159,5 +160,67 @@ const Blog = (props) => {
 
 };
 
+const Sidebar = (props) => {
+
+    const endpointPosts = process.env.REACT_APP_API_WP + 'posts?per_page=2&_embed';
+    const
+        [posts, setPosts] = useState([]),
+        [isLoading, setIsLoading] = useState(true);
+
+    useEffect( () => {
+        setIsLoading(true)
+        ApiCache(`blog-sidebar-last`, endpointPosts)
+            .then((r) => {
+                setPosts(r);
+                setIsLoading(false);
+            })
+            .catch((err) => console.log(err))
+    },[endpointPosts])
+
+    const recientes = posts.map( (post) => {
+
+        return (
+           <Link key={'sidebar-'+post.id} to={`/blog/${post.slug}`}>
+              <div className="sidebar-post-item">
+                  <div className='img-squared'>
+                      <img src={post?._embedded['wp:featuredmedia'][0]?.media_details?.sizes['thumbnail']?.source_url ?? 'default.jpg'} alt={post.title.rendered}/>
+                  </div>
+                  <h2 className={'title'}> {post.title.rendered}</h2>
+              </div>
+           </Link>
+       )
+
+    })
+    return (
+        <>
+            <div className="sidebar-section">
+                <div className="sidebar-decorator" />
+                <h2>Recientes</h2>
+
+                {recientes}
+
+            </div>
+
+            <div className="sidebar-section">
+                <h2>Buscador</h2>
+                <div className="sidebar-search">
+                    <input type="text" placeholder='buscar'/>
+                    <FontAwesomeIcon icon={faSearch} />
+                </div>
+            </div>
+
+            <div className="sidebar-section">
+                <h2>Archivo</h2>
+                <div className="sidebar-search">
+                    <select name="search">
+                        <option value="all">
+                            Elegir mes
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </>
+    )
+}
 
 export default Blog;

@@ -1,6 +1,6 @@
 import React  from 'react';
 import Header from "../common/Header";
-import './Nosotros.css'
+import './css/Nosotros.css'
 
 import Footer from "../common/Footer";
 
